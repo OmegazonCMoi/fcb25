@@ -1,17 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Roboto_Mono } from "next/font/google";
-
-const robotoMono = Roboto_Mono({
-  subsets: ["latin"],
-  weight: ["300", "700"],
-  style: ["italic"],
-  variable: "--font-roboto-mono",
-});
 
 const NavgiationMenu = () => {
   return (
-    <div className={` absolute w-full p-8 items-center text-neutral-100 flex`}>
+    <div className='absolute w-full p-8 items-center text-neutral-100 flex'>
       <div className="flex-1 flex items-center text-3xl">
         <Image
           src="/images/logo.png"
