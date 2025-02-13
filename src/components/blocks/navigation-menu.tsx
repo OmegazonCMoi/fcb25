@@ -1,39 +1,67 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const NavgiationMenu = () => {
+const NavigationMenu = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className='absolute w-full p-8 items-center text-neutral-100 flex'>
-            <div className="flex-1 flex items-center text-3xl">
+        <nav className="absolute top-0 left-0 w-full px-6 py-4 bg-white flex justify-between items-center z-50">
+            {/* LOGO */}
+            <div className="flex items-center">
                 <Link href="/">
                     <Image
                         src="/images/logo.png"
-                        alt="Navigation Menu Logo"
-                        className="mx-4 hover:rotate-12 transition-all duration-300 cursor-pointer"
+                        alt="Logo"
+                        className="cursor-pointer"
                         width={64}
                         height={64}
                     />
                 </Link>
             </div>
+
+            {/* MENU DESKTOP */}
             <ul
-                className="flex mx-20 tracking-widest space-x-2 lg:space-x-24 md:space-x-1 text-neutral-900"
+                className="hidden lg:flex tracking-widest space-x-20 mx-10 text-neutral-900"
                 style={{ fontFamily: "AdamBold" }}
             >
-                <Link href="/" className="link">
-                    Accueil
-                </Link>
-                <Link href="/ateliers" className="link">
-                    Ateliers
-                </Link>
-                <Link href="/salles" className="link">
-                    Salles
-                </Link>
-                <Link href="/contact" className="link">
-                    Contact
-                </Link>
+                <Link href="/" className="link">Accueil</Link>
+                <Link href="/ateliers" className="link">Ateliers</Link>
+                <Link href="/salles" className="link">Salles</Link>
+                <Link href="/contact" className="link">Contact</Link>
             </ul>
-        </div>
+
+            {/* BURGER MENU (MOBILE) */}
+            <div className="lg:hidden">
+                <button onClick={() => setIsOpen(!isOpen)} className="text-neutral-900">
+                    {isOpen ? <X size={32} /> : <Menu size={32} />}
+                </button>
+            </div>
+
+            {/* MENU MOBILE */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                        className="fixed top-0 right-0 h-full w-64 bg-white border z-50 flex flex-col items-center py-10 space-y-6 uppercase"
+                        style={{ fontFamily: "AdamBold" }}
+                    >
+                        <Link href="/" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Accueil</Link>
+                        <Link href="/ateliers" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Ateliers</Link>
+                        <Link href="/salles" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Salles</Link>
+                        <Link href="/contact" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Contact</Link>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
     );
 };
 
-export default NavgiationMenu;
+export default NavigationMenu;
