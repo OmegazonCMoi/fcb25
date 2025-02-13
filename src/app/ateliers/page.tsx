@@ -2,6 +2,7 @@ import React from "react";
 import NavigationMenu from '@/components/blocks/navigation-menu';
 import { ateliers } from "@/data/ateliers";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
 
 const Ateliers = () => {
     return (
@@ -11,7 +12,7 @@ const Ateliers = () => {
                 <h1 className="text-4xl font-bold mb-8 text-neutral-900 text-center md:text-left md:self-start">
                     Ateliers
                 </h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mb-10">
                     {ateliers.map((atelier) => (
                         <Card key={atelier.id} className="mx-auto">
                             <CardHeader className="pb-1">
@@ -22,13 +23,14 @@ const Ateliers = () => {
                                 <p className="leading-snug text-muted-foreground">
                                     {atelier.description}
                                 </p>
-                                {/* <p className="text-neutral-600">  <strong>Hôtes :</strong> {atelier.hotes.join(", ")}</p> */}
                             </CardContent>
                             <CardFooter className="justify-end pb-0 pr-0">
-                                <img
+                                <Image
                                     className="h-40 w-full rounded-tl-md rounded-br-xl object-cover object-center"
                                     src={atelier.imgsrc}
                                     alt="placeholder"
+                                    width={1000}
+                                    height={1000}
                                 />
                             </CardFooter>
                         </Card>
