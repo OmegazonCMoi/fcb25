@@ -10,7 +10,7 @@ const NavigationMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="absolute top-0 left-0 w-full px-6 py-4 bg-white flex justify-between items-center z-50">
+        <nav className="absolute top-0 left-0 w-full px-12 py-8 bg-white flex justify-between items-center z-50">
             {/* LOGO */}
             <div className="flex items-center">
                 <Link href="/">
@@ -50,7 +50,7 @@ const NavigationMenu = () => {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="fixed top-0 right-0 h-full w-64 bg-white border z-50 flex flex-col items-center py-10 space-y-6 uppercase"
+                        className="fixed top-0 right-0 h-full w-64 bg-white border-l z-50 flex flex-col items-center py-10 space-y-6 uppercase"
                         style={{ fontFamily: "AdamBold" }}
                     >
                         <Link href="/" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Accueil</Link>
