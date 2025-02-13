@@ -65,18 +65,18 @@ export default function Home() {
           height={350}
         />
       </div>
-      <div className="flex absolute bottom-36 mx-auto justify-center items-center max-w-7xl w-full p-10 border rounded-3xl left-1/2 -translate-x-1/2">
-        <div className="flex w-1/3 flex-col items-center p-4">
+      <div className="flex absolute bottom-36 mx-auto justify-center items-center max-w-7xl w-full p-4 md:p-10 md:border rounded-3xl left-1/2 -translate-x-1/2">
+        <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
           <span className="text-4xl font-bold text-neutral-800">11</span>
           <span className="text-base text-gray-500">Ateliers disponibles</span>
         </div>
         <Separator orientation="vertical" className="h-28" />
-        <div className="flex w-1/3 flex-col items-center p-4">
+        <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
           <span className="text-4xl font-bold text-neutral-800">400+</span>
           <span className="text-base text-gray-500">Participants inscrits</span>
         </div>
         <Separator orientation="vertical" className="h-28" />
-        <div className="flex w-1/3 flex-col items-center p-4">
+        <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
           <span className="text-4xl font-bold text-neutral-800">95%</span>
           <span className="text-base text-gray-500">Taux de satisfaction</span>
         </div>
