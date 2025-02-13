@@ -14,7 +14,7 @@ const NavgiationMenu = () => {
         />
       </div>
       <ul
-        className="flex mx-20 tracking-widest space-x-2 lg:space-x-24 md:space-x-12"
+        className="flex mx-20 tracking-widest space-x-2 lg:space-x-24 md:space-x-1 text-neutral-900"
         style={{ fontFamily: "AdamBold" }}
       >
         <Link href="/" className="link">
