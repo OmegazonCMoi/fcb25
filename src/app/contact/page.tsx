@@ -31,7 +31,7 @@ const Contact = () => {
             <div className="flex flex-col items-center justify-center w-[30em] mx-auto h-screen p-6">
                 <div className="text-left self-start mb-4">
                     <h1 className="text-4xl font-bold">Contactez-nous !</h1>
-                    <p className="text-neutral-400">N'hésitez pas à nous contacter pour plus d'informations.</p>
+                    <p className="text-neutral-400">N&apos;hésitez pas à nous contacter pour plus d&apos;informations.</p>
                 </div>
                 <div className="w-full flex flex-col gap-4">
                     {/* Inputs Prénom + Nom */}

@@ -11,11 +11,6 @@ const latoThin = Lato({
   weight: '100'
 });
 
-const latoNormal = Lato({
-  subsets: ["latin"],
-  weight: '300'
-});
-
 export default function Home() {
   return (
     <div>
