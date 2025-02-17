@@ -39,7 +39,7 @@ const Contact = () => {
                             <Label htmlFor="firstname">Prénom</Label>
                             <Input
                                 type="text"
-                                className="w-full text-sm md:text-base"
+                                className="w-full text-sm"
                                 placeholder="Entrez votre prénom..."
                                 name="firstname"
                                 id="firstname"
@@ -50,7 +50,7 @@ const Contact = () => {
                             <Label htmlFor="lastname">Nom</Label>
                             <Input
                                 type="text"
-                                className="w-full text-sm md:text-base"
+                                className="w-full text-sm"
                                 placeholder="Entrez votre nom..."
                                 name="lastname"
                                 id="lastname"
@@ -77,7 +77,7 @@ const Contact = () => {
                         <Label htmlFor="email">Email</Label>
                         <Input
                             type="email"
-                            className="w-full text-sm md:text-base"
+                            className="w-full text-sm"
                             placeholder="Entrez votre email..."
                             name="email"
                             id="email"
@@ -88,7 +88,7 @@ const Contact = () => {
                     <div className="w-full">
                         <Label htmlFor="message">Message</Label>
                         <Textarea
-                            className="w-full text-sm md:text-base"
+                            className="w-full text-sm"
                             placeholder="Écrivez votre message..."
                             name="message"
                             id="message"
