@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef, useState } from "react";
-import NavigationMenu from '@/components/blocks/navigation-menu';
+import NavigationMenuDesktop from '@/components/blocks/navigation-menu';
 import {
     Select,
     SelectContent,
@@ -27,20 +27,19 @@ const Contact = () => {
     }
     return (
         <>
-            <NavigationMenu />
+            <NavigationMenuDesktop />
             <div className="flex flex-col items-center justify-center w-full md:w-[30em] mx-auto h-screen p-6">
                 <div className="text-left self-start mb-4">
-                    <h1 className="text-4xl font-bold">Contactez-nous !</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold">Contactez-nous !</h1>
                     <p className="text-neutral-400">N&apos;hésitez pas à nous contacter pour plus d&apos;informations.</p>
                 </div>
                 <div className="w-full flex flex-col gap-4">
-                    {/* Inputs Prénom + Nom */}
                     <div className="flex gap-4 w-full">
                         <div className="w-full">
                             <Label htmlFor="firstname">Prénom</Label>
                             <Input
                                 type="text"
-                                className="w-full"
+                                className="w-full text-sm md:text-base"
                                 placeholder="Entrez votre prénom..."
                                 name="firstname"
                                 id="firstname"
@@ -51,7 +50,7 @@ const Contact = () => {
                             <Label htmlFor="lastname">Nom</Label>
                             <Input
                                 type="text"
-                                className="w-full"
+                                className="w-full text-sm md:text-base"
                                 placeholder="Entrez votre nom..."
                                 name="lastname"
                                 id="lastname"
@@ -60,7 +59,6 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Champ Statut */}
                     <div className="w-full">
                         <Label htmlFor="statut">Statut</Label>
                         <Select name="statut" onValueChange={(value) => setSelectedValue(value)}>
@@ -75,12 +73,11 @@ const Contact = () => {
                         </Select>
                     </div>
 
-                    {/* Champ Email */}
                     <div className="w-full">
                         <Label htmlFor="email">Email</Label>
                         <Input
                             type="email"
-                            className="w-full"
+                            className="w-full text-sm md:text-base"
                             placeholder="Entrez votre email..."
                             name="email"
                             id="email"
@@ -88,11 +85,10 @@ const Contact = () => {
                         />
                     </div>
 
-                    {/* Champ Message */}
                     <div className="w-full">
                         <Label htmlFor="message">Message</Label>
                         <Textarea
-                            className="w-full"
+                            className="w-full text-sm md:text-base"
                             placeholder="Écrivez votre message..."
                             name="message"
                             id="message"
@@ -100,7 +96,6 @@ const Contact = () => {
                         />
                     </div>
 
-                    {/* Bouton Envoyer */}
                     <Button
                         className="w-full"
                         onClick={handleSubmit}

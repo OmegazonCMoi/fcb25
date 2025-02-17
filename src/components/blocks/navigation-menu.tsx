@@ -30,6 +30,7 @@ const NavigationMenu = () => {
                 style={{ fontFamily: "AdamBold" }}
             >
                 <Link href="/" className="link">Accueil</Link>
+                <Link href="/presentation" className="link">Presentation</Link>
                 <Link href="/ateliers" className="link">Ateliers</Link>
                 <Link href="/salles" className="link">Salles</Link>
                 <Link href="/contact" className="link">Contact</Link>
@@ -54,6 +55,7 @@ const NavigationMenu = () => {
                         style={{ fontFamily: "AdamBold" }}
                     >
                         <Link href="/" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Accueil</Link>
+                        <Link href="/presentation" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Presentation</Link>
                         <Link href="/ateliers" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Ateliers</Link>
                         <Link href="/salles" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Salles</Link>
                         <Link href="/contact" className="text-lg text-neutral-900 font-bold" onClick={() => setIsOpen(false)}>Contact</Link>

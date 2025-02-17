@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
       "static.wikia.nocookie.net",
       "i.ytimg.com",
       "i.pinimg.com",
+      "i.redd.it",
+      "pbs.twimg.com",
     ],
   },
 };
