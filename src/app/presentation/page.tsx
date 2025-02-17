@@ -22,7 +22,7 @@ const Presentation = () => {
             <div className="flex items-center justify-center h-screen text-center max-w-6xl mx-auto w-full md:text-left px-4">
                 <div className="w-full md:w-1/2">
                     <h1 className="text-3xl md:text-4xl font-bold">
-                        Qu'est-ce que c'est ?
+                        Qu&apos;est-ce que c&apos;est ?
                     </h1>
                     <p className="max-w-2xl mt-4 text-neutral-400">
                         Le Forum Cybersécurité, organisé les 7 et 8 avril 2025 au sein de notre lycée, réunit élèves et enseignants autour des enjeux de la sécurité informatique. L’événement propose dix ateliers immersifs et un faux procès pour explorer la cybersécurité de façon interactive. Après le succès de la première édition, cette nouvelle version s&apos;annonce encore plus enrichie.                    </p>
@@ -51,7 +51,7 @@ const Presentation = () => {
             <section className="py-32 bg-gray-50" id="objectifs">
                 <div className="container px-4 md:px-0 mx-auto max-w-screen-xl">
                     <h2 className="text-3xl md:pl-5 lg:text-4xl font-bold">Nos Objectifs</h2>
-                    <p className="mt-4 md:pl-5 text-neutral-600 max-w-2xl text-sm md:text-base">L'objectif principal du Forum Cybersécurité est de sensibiliser les participants aux risques numériques et aux bonnes pratiques en matière de cybersécurité. À travers des mises en situation et des ateliers pratiques, les élèves pourront :</p>
+                    <p className="mt-4 md:pl-5 text-neutral-600 max-w-2xl text-sm md:text-base">L&apos;objectif principal du Forum Cybersécurité est de sensibiliser les participants aux risques numériques et aux bonnes pratiques en matière de cybersécurité. À travers des mises en situation et des ateliers pratiques, les élèves pourront :</p>
                     <div className="mx-auto mt-14 grid gap-x-20 gap-y-8 md:grid-cols-2 md:gap-y-6 lg:mt-10">
                         {objectifs.map((objectif, idx) => (
                             <div className="flex gap-6 rounded-lg md:block md:p-5" key={idx}>
@@ -74,8 +74,8 @@ const Presentation = () => {
 
             <section className="py-32" id="organisation">
                 <div className="container px-4 md:px-0 mx-auto max-w-screen-xl">
-                    <h2 className="text-3xl md:pl-5 lg:text-4xl font-bold">L'organisation</h2>
-                    <p className="mt-4 md:pl-5 text-neutral-600 max-w-2xl text-sm md:text-base mb-16">Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités. Chacun apporte son expertise, qu'il s'agisse d'informatique, de cybersécurité, de droit ou encore de communication, afin de proposer des ateliers immersifs et interactifs. </p>
+                    <h2 className="text-3xl md:pl-5 lg:text-4xl font-bold">L&apos;organisation</h2>
+                    <p className="mt-4 md:pl-5 text-neutral-600 max-w-2xl text-sm md:text-base mb-16">Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités. Chacun apporte son expertise, qu&apos;il s&apos;agisse d&apos;informatique, de cybersécurité, de droit ou encore de communication, afin de proposer des ateliers immersifs et interactifs. </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
                         <LittleCard
