@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
       "i.pinimg.com",
       "i.redd.it",
       "pbs.twimg.com",
+      "imgcdn.sigstick.com",
     ],
   },
 };

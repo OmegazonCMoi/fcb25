@@ -6,11 +6,12 @@ interface LittleCardProps {
     title: string;
     description: string;
     img: string;
+    className?: string;
 }
 
-const LittleCard: React.FC<LittleCardProps> = ({ icon, title, description, img }) => {
+const LittleCard: React.FC<LittleCardProps> = ({ icon, title, description, img, className }) => {
     return <>
-        <Card className="mx-auto">
+        <Card className={`${className} mx-auto`}>
             <CardHeader className="pb-1">
                 {icon}
             </CardHeader>

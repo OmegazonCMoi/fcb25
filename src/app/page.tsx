@@ -97,7 +97,7 @@ export default function Home() {
           <span className="text-4xl font-bold text-neutral-800">400+</span>
           <span className="text-base text-gray-500">Participants <br className="visible md:hidden" /> en 2024</span>
         </div>
-        <Separator orientation="vertical" className="h-12 md:28" />
+        <Separator orientation="vertical" className="h-12 md:h-28" />
         <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
           <span className="text-4xl font-bold text-neutral-800">95%</span>
           <span className="text-base text-gray-500">Taux de satisfaction</span>
