@@ -5,7 +5,6 @@ import React from "react";
 import Image from "next/image"
 import { Button } from "@/components/ui/button";
 import { objectifs } from "@/data/objectifs";
-import LittleCard from "@/components/blocks/little-card";
 
 const Presentation = () => {
 
