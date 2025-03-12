@@ -1,12 +1,13 @@
 import {
     Bitcoin,
+    Bot,
     DoorOpen,
     Eye,
     Fish,
+    Glasses,
     Lock,
     Server,
     Usb,
-    Wheat,
     Wifi
 } from "lucide-react";
 
@@ -80,7 +81,7 @@ export const ateliers = [
         title: "Atelier Dark Web",
         description: "Le Dark Web : mythe ou réalité ? Plongez dans les profondeurs d'Internet et découvrez ce qui s'y cache réellement, entre mystères et dangers.",
         hotes: ["Zitoune", "Pignouf"],
-        icon: <Wheat className="size-4" strokeWidth={1} />,
+        icon: <Glasses className="size-4" strokeWidth={1} />,
         imgsrc: "/images/ateliers/4.png"
     },
     {
@@ -88,7 +89,7 @@ export const ateliers = [
         title: "Atelier IA",
         description: "L’intelligence artificielle est une alliée… jusqu’au jour où elle devient une menace.",
         hotes: ["Zitoune", "Pignouf"],
-        icon: <Wheat className="size-4" strokeWidth={1} />,
+        icon: <Bot className="size-4" strokeWidth={1} />,
         imgsrc: "/images/ateliers/4.png"
     }
 ];
