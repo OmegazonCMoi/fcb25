@@ -72,30 +72,44 @@ const Presentation = () => {
                 </div>
             </section>
 
-            <section className="py-32" id="organisation">
-                <div className="container px-4 md:px-0 mx-auto max-w-screen-xl">
-                    <h2 className="text-3xl md:pl-5 lg:text-4xl font-bold">L&apos;organisation</h2>
-                    <p className="mt-4 md:pl-5 text-neutral-600 max-w-2xl text-sm md:text-base mb-16">Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités. Chacun apporte son expertise, qu&apos;il s&apos;agisse d&apos;informatique, de cybersécurité, de droit ou encore de communication, afin de proposer des ateliers immersifs et interactifs. </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
-                        <LittleCard
-                            icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"><path fillRule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clipRule="evenodd" /><path fillRule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clipRule="evenodd" /></svg>}
-                            title="Organisation"
-                            description="Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités."
-                            img="https://i.ytimg.com/vi/rQE5MptQO-g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCLOyxcpWzyV0xXwpbwH27x3LOpnQ"
-                        />
-                        <LittleCard
-                            icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"><path fillRule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clipRule="evenodd" /><path fillRule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clipRule="evenodd" /></svg>}
-                            title="Organisation"
-                            description="Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités."
-                            img="https://media.tenor.com/xRF_8aickxwAAAAe/silly-cat-silly-car.png"
-                        />
-                        <LittleCard
-                            icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"><path fillRule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clipRule="evenodd" /><path fillRule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clipRule="evenodd" /></svg>}
-                            title="Organisation"
-                            description="Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités."
-                            img="https://pbs.twimg.com/media/GODbh4wXMAAJ2yP.jpg:large"
-                        />
+            <section className="pt-32 pb-16" id="organisation">
+                <div className="container px-4 md:px-0 mx-auto max-w-screen-xl text-center items-center flex flex-col">
+                    <div>
+                        <h2 className="md:pl-5 text-4xl font-bold">L&apos;organisation</h2>
+                        <p className="mt-4 md:pl-5 text-neutral-500 max-w-2xl text-sm md:text-base mb-16">Cet événement repose sur une collaboration étroite entre plusieurs formations du lycée, réunissant des élèves et enseignants de différentes spécialités. Chacun apporte son expertise, qu&apos;il s&apos;agisse d&apos;informatique, de cybersécurité, de droit ou encore de communication, afin de proposer des ateliers immersifs et interactifs. </p>
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
+                        <div className="md:w-1/2 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-neutral-900">Les BTS SIO</h2>
+                            <p className="text-neutral-500">
+                                Les étudiants du BTS SIO préparent des ateliers pour le forum sur la cybersécurité. Ils proposeront des démonstrations et des conseils pratiques pour sensibiliser aux enjeux de la sécurité numérique.
+                            </p>
+                        </div>
+                        <div className="md:w-1/2 flex justify-end">
+                            <Image src="/images/peeps/peep-sio.png" alt="Peep Standing" width={180} height={180} className="scale-x-[-1]" />
+                        </div>
+                    </div>
+                    <div className="flex flex-col md:flex-row-reverse items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
+                        <div className="md:w-1/2 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-neutral-900 text-right">Les BTS SAM</h2>
+                            <p className="text-neutral-500 text-right">
+                                Les étudiants du BTS SAM ont assuré l’organisation du forum sur la cybersécurité. Ils ont pris en charge le planning, la mise en place de la communication et la création du site web.
+                            </p>
+                        </div>
+                        <div className="md:w-1/2 flex">
+                            <Image src="/images/peeps/peep-sam.png" alt="Peep Standing" width={250} height={250} />
+                        </div>
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
+                        <div className="md:w-1/2 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-neutral-900">Les STMG</h2>
+                            <p className="text-neutral-500">
+                                Les élèves de STMG ont organisé un faux procès lors du forum sur la cybersécurité. À travers cette mise en scène, ils illustrent les conséquences juridiques des cyberattaques.
+                            </p>
+                        </div>
+                        <div className="md:w-1/2 flex justify-end">
+                            <Image src="/images/peeps/peep-stmg.png" alt="Peep Standing" width={250} height={250} className="scale-x-[-1]" />
+                        </div>
                     </div>
                 </div>
             </section>

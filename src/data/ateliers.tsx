@@ -1,21 +1,21 @@
-import { Apple, Battery, Code, Dock, Grab, LogOut, Pyramid, Radiation, Salad, Wheat } from "lucide-react";
+import { Battery, Dock, Grab, LogOut, Pyramid, Radiation, Salad, Usb, Wheat, Wifi } from "lucide-react";
 
 export const ateliers = [
     {
         id: 1,
-        title: "Atelier N°1",
-        description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
+        title: "Atelier WiFi Public",
+        description: "Tentez de remporter un séjour pour 2 personnes dans un hôtel en Suisse grâce à ce concours Instagram !",
         hotes: ["Zitoune", "Pignouf"],
-        icon: <Code className="size-4" strokeWidth={1} />,
-        imgsrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVOFWiQ0ATLAlOoPbpx4ixlalH5dEpcewMkw&s"
+        icon: <Wifi className="size-4" strokeWidth={1} />,
+        imgsrc: "/images/ateliers/1.png"
     },
     {
         id: 2,
         title: "Atelier N°2",
-        description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
+        description: "Un simple clic et vos photos privées se retrouvent sur le web. Toujours sûr de vouloir brancher cette clé USB ?",
         hotes: ["Zitoune", "Pignouf"],
-        icon: <Apple className="size-4" strokeWidth={1} />,
-        imgsrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxcV2DjOX2plp7rP_qDILaXcfd2863RRHXYA&s"
+        icon: <Usb className="size-4" strokeWidth={1} />,
+        imgsrc: "/images/ateliers/2.png"
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Battery className="size-4" strokeWidth={1} />,
-        imgsrc: "https://media.tenor.com/VLfncxgyYeIAAAAM/cat.gif"
+        imgsrc: "/images/ateliers/3.png"
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Dock className="size-4" strokeWidth={1} />,
-        imgsrc: "https://static.wikia.nocookie.net/silly-cat/images/3/36/Ah_So_Cat.png"
+        imgsrc: "/images/ateliers/4.png"
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Grab className="size-4" strokeWidth={1} />,
-        imgsrc: "https://static.wikia.nocookie.net/f4f4ff96-beee-478e-b0a4-e252e821106b/scale-to-width/755"
+        imgsrc: "/images/ateliers/5.png"
     },
     {
         id: 6,
@@ -47,7 +47,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <LogOut className="size-4" strokeWidth={1} />,
-        imgsrc: "https://i.ytimg.com/vi/fH0RXK3y3Ls/hqdefault.jpg"
+        imgsrc: "/images/ateliers/6.png"
     },
     {
         id: 7,
@@ -55,7 +55,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Radiation className="size-4" strokeWidth={1} />,
-        imgsrc: "https://i.ytimg.com/vi/eXwZMAz9Vh8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAVeD81lYf_ygdk1dICZMM1AtEY0w"
+        imgsrc: "/images/ateliers/1.png"
     },
     {
         id: 8,
@@ -63,7 +63,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Pyramid className="size-4" strokeWidth={1} />,
-        imgsrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJm9OoldS7YeYEbeCcTw3VLxydnejzYPnQXQ&s"
+        imgsrc: "/images/ateliers/2.png"
     },
     {
         id: 9,
@@ -71,7 +71,7 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Salad className="size-4" strokeWidth={1} />,
-        imgsrc: "https://i.pinimg.com/236x/2b/a8/ef/2ba8efdd9bdbbb89dd0670408c76745d.jpg"
+        imgsrc: "/images/ateliers/3.png"
     },
     {
         id: 10,
@@ -79,6 +79,6 @@ export const ateliers = [
         description: "Oui bonjour j'aime les quiches ah bah non en fait c'est pas si ouf en vrai.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Wheat className="size-4" strokeWidth={1} />,
-        imgsrc: "https://media.tenor.com/nqBUintQUbEAAAAM/cat.gif"
+        imgsrc: "/images/ateliers/4.png"
     }
 ];

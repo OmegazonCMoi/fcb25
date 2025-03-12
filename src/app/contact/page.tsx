@@ -23,7 +23,7 @@ const Contact = () => {
     const [selectedValue, setSelectedValue] = useState<string>("");
 
     const handleSubmit = () => {
-        window.location.href = `mailto:mail@forum.com?subject=Contact de ${firstname.current?.value} ${lastname.current?.value} - ${selectedValue}&body=${message.current?.value}`;
+        window.location.href = `mailto:noah@dekeyzer.fr?subject=Contact de ${firstname.current?.value} ${lastname.current?.value} - ${selectedValue}&body=${message.current?.value}`;
     }
     return (
         <>
