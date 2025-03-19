@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import NavigationMenu from "@/components/blocks/navigation-menu";
@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Gradients from "@/components/blocks/gradients";
 
 const latoThin = Lato({
   subsets: ["latin"],
@@ -48,31 +49,34 @@ const Counter = ({ from = 0, to, sign }: { from?: number; to: number; sign?: str
     return () => clearInterval(timer);
   }, [from, to]);
 
-  return <motion.span className="text-4xl font-bold text-neutral-800">{count}{sign}</motion.span>;
+  return <motion.span className="text-4xl font-bold text-neutral-200">{count}{sign}</motion.span>;
 };
 
 export default function Home() {
   return (
     <>
       <NavigationMenu />
+      <Gradients />
       <div className="absolute top-1/2 -translate-y-3/4 left-1/2 -translate-x-1/2 flex flex-col md:flex-row justify-between items-center max-w-7xl w-full text-center md:text-left gap-48">
         <div className="flex flex-col self-start">
           <div className="flex md:hidden items-center justify-center mx-auto z-50">
-            <img
+            <Image
               src="/images/arrow.png"
               alt="Arrow showing title"
               className="w-20 h-20 justify-center filter grayscale"
+              width={80}
+              height={80}
             />
-            <h1
-              className={`${gochihand.className} text-brown text-base whitespace-nowrap transform -translate-y-3 rotate-6 text-neutral-600`}
+            <p
+              className={`${gochihand.className} text-base whitespace-nowrap transform -translate-y-3 rotate-6 text-neutral-200`}
             >
               Du 7 au 8 Avril !
-            </h1>
+            </p>
           </div>
-          <h1 className={`${latoThin.className} justify-center mx-auto md:mx-0 text-3xl md:text-6xl`}>
+          <h1 className={`${latoThin.className} justify-center mx-auto md:mx-0 text-3xl md:text-6xl text-neutral-200`}>
             Forum Cybersécurité 2025
           </h1>
-          <p className={`${latoNormal.className} justify-center mx-auto md:mx-0 text-lg text-neutral-600 mt-4 w-96 md:w-full`}>
+          <p className={`${latoNormal.className} justify-center mx-auto md:mx-0 text-lg text-neutral-300 mt-4 w-96 md:w-full`}>
             Un événement pour découvrir différentes attaques et défenses en cybersécurité avec différents ateliers et sujets de discussion.
           </p>
           <div className="mt-6 space-x-2 flex items-center justify-center md:justify-start mx-auto md:mx-0">
@@ -93,13 +97,15 @@ export default function Home() {
             </Button>
           </div>
           <div className="absolute lg:flex items-center justify-center mx-auto hidden">
-            <img
+            <Image
               src="/images/arrow.png"
               alt="Arrow showing title"
               className="w-20 h-20 justify-center transform translate-x-[25em] translate-y-28 filter grayscale rotate-[320deg]"
+              width={256}
+              height={256}
             />
             <h1
-              className={`${gochihand.className} text-brown text-base whitespace-nowrap transform rotate-6 translate-x-[24em] translate-y-36 text-neutral-600`}
+              className={`${gochihand.className} text-base whitespace-nowrap transform rotate-6 translate-x-[24em] translate-y-36 text-neutral-200`}
             >
               Du 7 au 8 Avril !
             </h1>
@@ -114,25 +120,23 @@ export default function Home() {
           height={350}
         />
       </div>
-      <div
-        className="absolute bottom-24 md:bottom-36 w-full px-4"
-      >
-        <div className="flex justify-center items-center mx-auto max-w-7xl w-full p-4 md:p-10 md:border rounded-3xl">
-          <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
+      <div className="absolute bottom-24 md:bottom-36 w-full px-4">
+        <div className="flex justify-center items-center mx-auto max-w-7xl w-full p-4 md:p-10 md:border border-neutral-800 rounded-3xl gap-4">
+          <div className="flex flex-1 flex-col items-center justify-center md:p-4 text-center">
             <Counter to={10} />
-            <span className="text-base text-gray-500">Ateliers disponibles</span>
+            <span className="text-base text-gray-400">Ateliers disponibles</span>
           </div>
-          <Separator orientation="vertical" className="h-12 md:h-28" />
-          <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
+          <Separator orientation="vertical" className="h-12 md:h-28 bg-neutral-800" />
+          <div className="flex flex-1 flex-col items-center justify-center md:p-4 text-center">
             <Counter to={400} sign="+" />
-            <span className="text-base text-gray-500">
-              Participants <br className="visible md:hidden" /> en 2024
-            </span>
+            <span className="text-base text-gray-400">
+        Participants <br className="visible md:hidden" /> en 2024
+      </span>
           </div>
-          <Separator orientation="vertical" className="h-12 md:h-28" />
-          <div className="flex w-1/3 flex-col items-center md:p-4 text-center">
+          <Separator orientation="vertical" className="h-12 md:h-28 bg-neutral-800" />
+          <div className="flex flex-1 flex-col items-center justify-center md:p-4 text-center">
             <Counter to={95} sign="%" />
-            <span className="text-base text-gray-500">Taux de satisfaction</span>
+            <span className="text-base text-gray-400">Taux de satisfaction</span>
           </div>
         </div>
       </div>

@@ -47,14 +47,14 @@ const Presentation = () => {
                 </div>
             </div>
 
-            <section className="py-32 bg-gray-50" id="objectifs">
+            <section className="py-32 bg-neutral-900" id="objectifs">
                 <div className="container px-4 md:px-0 mx-auto max-w-screen-xl">
                     <h2 className="text-3xl md:pl-5 lg:text-4xl font-bold">Nos Objectifs</h2>
-                    <p className="mt-4 md:pl-5 text-neutral-600 max-w-2xl text-sm md:text-base">L&apos;objectif principal du Forum Cybersécurité est de sensibiliser les participants aux risques numériques et aux bonnes pratiques en matière de cybersécurité. À travers des mises en situation et des ateliers pratiques, les élèves pourront :</p>
+                    <p className="mt-4 md:pl-5 text-neutral-400 max-w-2xl text-sm md:text-base">L&apos;objectif principal du Forum Cybersécurité est de sensibiliser les participants aux risques numériques et aux bonnes pratiques en matière de cybersécurité. À travers des mises en situation et des ateliers pratiques, les élèves pourront :</p>
                     <div className="mx-auto mt-14 grid gap-x-20 gap-y-8 md:grid-cols-2 md:gap-y-6 lg:mt-10">
                         {objectifs.map((objectif, idx) => (
                             <div className="flex gap-6 rounded-lg md:block md:p-5" key={idx}>
-                                <span className="mb-8 flex size-10 shrink-0 items-center justify-center rounded-full bg-accent md:size-12">
+                                <span className="mb-8 flex size-10 shrink-0 items-center justify-center rounded-full bg-neutral-700 md:size-12">
                                     {objectif.icon}
                                 </span>
                                 <div>
@@ -79,7 +79,7 @@ const Presentation = () => {
                     </div>
                     <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
                         <div className="md:w-1/2 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-neutral-900">Les BTS SIO</h2>
+                            <h2 className="text-3xl font-bold text-neutral-200">Les BTS SIO</h2>
                             <p className="text-neutral-500">
                                 Les étudiants du BTS SIO préparent des ateliers pour le forum sur la cybersécurité. Ils proposeront des démonstrations et des conseils pratiques pour sensibiliser aux enjeux de la sécurité numérique.
                             </p>
@@ -90,8 +90,8 @@ const Presentation = () => {
                     </div>
                     <div className="flex flex-col md:flex-row-reverse items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
                         <div className="md:w-1/2 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-neutral-900 text-right">Les BTS SAM</h2>
-                            <p className="text-neutral-500 text-right">
+                            <h2 className="text-3xl font-bold text-neutral-200 md:text-right">Les BTS SAM</h2>
+                            <p className="text-neutral-500 md:text-right">
                                 Les étudiants du BTS SAM ont assuré l’organisation du forum sur la cybersécurité. Ils ont pris en charge le planning, la mise en place de la communication et la création du site web.
                             </p>
                         </div>
@@ -101,7 +101,7 @@ const Presentation = () => {
                     </div>
                     <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
                         <div className="md:w-1/2 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-neutral-900">Les STMG</h2>
+                            <h2 className="text-3xl font-bold text-neutral-200">Les STMG</h2>
                             <p className="text-neutral-500">
                                 Les élèves de STMG ont organisé un faux procès lors du forum sur la cybersécurité. À travers cette mise en scène, ils illustrent les conséquences juridiques des cyberattaques.
                             </p>

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,15 +59,18 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
+@layer utilities {
+  .border-border {
+    border-color: hsl(var(--border));
   }
 }
+
+body {
+  @apply text-foreground;
+  background-color: #121212;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 @font-face {
   font-family: "AdamBold";
@@ -94,7 +92,7 @@ body {
 
 .link:focus,
 .link:hover {
-  color: #222222;
+  color: #808080;
 }
 
 .link:focus:after,
