@@ -42,7 +42,7 @@ export const ateliers = [
         description: "Et si ce message super urgent ou cette promo de rêve était en fait… un piège ? Venez apprendre à ne plus se faire avoir !",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Fish className="size-4" strokeWidth={1} />,
-        imgsrc: "/images/ateliers/5.png"
+        imgsrc: "/images/ateliers/5.jpeg"
     },
     {
         id: 5,
@@ -58,7 +58,7 @@ export const ateliers = [
         description: "Que feriez-vous si, en quelques secondes, tout votre système se retrouvait complètement paralysé ?",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Server className="size-4" strokeWidth={1} />,
-        imgsrc: "/images/ateliers/1.png"
+        imgsrc: "/images/ateliers/8.png"
     },
     {
         id: 7,
@@ -66,7 +66,7 @@ export const ateliers = [
         description: "Un matin, vous allumez votre ordinateur et… tous vos fichiers sont bloqués. Payer ou tout perdre ? Apprenez à éviter ce choix impossible.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Bitcoin className="size-4" strokeWidth={1} />,
-        imgsrc: "/images/ateliers/2.png"
+        imgsrc: "/images/ateliers/6.png"
     },
     {
         id: 8,
@@ -74,7 +74,7 @@ export const ateliers = [
         description: "Vous seriez surpris de tout ce qu’on peut savoir sur vous… Découvrez comment les hackers prennent le contrôle de votre vie privée.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Eye className="size-4" strokeWidth={1} />,
-        imgsrc: "/images/ateliers/3.png"
+        imgsrc: "/images/ateliers/7.jpeg"
     },
     {
         id: 9,
