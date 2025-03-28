@@ -32,7 +32,6 @@ const NavigationMenu = () => {
                 <Link href="/" className="link">Accueil</Link>
                 <Link href="/presentation" className="link">Presentation</Link>
                 <Link href="/ateliers" className="link">Ateliers</Link>
-                <Link href="/salles" className="link">Salles</Link>
                 <Link href="/contact" className="link">Contact</Link>
             </ul>
 
