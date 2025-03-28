@@ -99,17 +99,6 @@ const Presentation = () => {
                             <Image src="/images/peeps/peep-sam.png" alt="Peep Standing" width={250} height={250} />
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto px-6 py-12 gap-12">
-                        <div className="md:w-1/2 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-neutral-200">Les STMG</h2>
-                            <p className="text-neutral-400">
-                                Les élèves de STMG ont organisé un faux procès lors du forum sur la cybersécurité. À travers cette mise en scène, ils illustrent les conséquences juridiques des cyberattaques.
-                            </p>
-                        </div>
-                        <div className="md:w-1/2 flex justify-end">
-                            <Image src="/images/peeps/peep-stmg.png" alt="Peep Standing" width={250} height={250} className="scale-x-[-1]" />
-                        </div>
-                    </div>
                 </div>
             </section>
         </>
