@@ -18,13 +18,6 @@ const Presentation = () => {
     return (
         <>
             <NavigationMenu />
-            <div className="relative w-full z-10">
-                <div
-                    className="absolute inset-0 bg-cover bg-center h-[360vh]"
-                    style={{ backgroundImage: "url('/images/neat-long.png')" }}
-                />
-            </div>
-
             <div className="flex items-center justify-center h-screen text-center max-w-6xl mx-auto w-full md:text-left px-4 z-20">
                 <div className="w-full md:w-1/2 z-20">
                     <h1 className="text-3xl md:text-4xl font-bold">
