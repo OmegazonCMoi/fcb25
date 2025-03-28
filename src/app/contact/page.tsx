@@ -14,7 +14,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
-
 const Contact = () => {
     const firstname = useRef<HTMLInputElement>(null);
     const lastname = useRef<HTMLInputElement>(null);
@@ -25,10 +24,19 @@ const Contact = () => {
     const handleSubmit = () => {
         window.location.href = `mailto:noah@dekeyzer.fr?subject=Contact de ${firstname.current?.value} ${lastname.current?.value} - ${selectedValue}&body=${message.current?.value}`;
     }
+
     return (
-        <>
-            <NavigationMenuDesktop />
-            <div className="flex flex-col items-center justify-center w-full md:w-[30em] mx-auto h-screen p-6">
+        <div className="relative w-full min-h-screen overflow-hidden">
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/neat-long.png')" }}
+            />
+
+            <div className="relative z-50">
+                <NavigationMenuDesktop />
+            </div>
+
+            <div className="relative z-30 flex flex-col items-center justify-center w-full md:w-[30em] mx-auto h-screen p-6">
                 <div className="text-left self-start mb-4">
                     <h1 className="text-3xl md:text-4xl font-bold">Contactez-nous !</h1>
                     <p className="text-neutral-400">N&apos;hésitez pas à nous contacter pour plus d&apos;informations.</p>
@@ -39,7 +47,7 @@ const Contact = () => {
                             <Label htmlFor="firstname">Prénom</Label>
                             <Input
                                 type="text"
-                                className="w-full text-sm"
+                                className="w-full text-sm bg-neutral-900"
                                 placeholder="Entrez votre prénom..."
                                 name="firstname"
                                 id="firstname"
@@ -50,7 +58,7 @@ const Contact = () => {
                             <Label htmlFor="lastname">Nom</Label>
                             <Input
                                 type="text"
-                                className="w-full text-sm"
+                                className="w-full text-sm bg-neutral-900"
                                 placeholder="Entrez votre nom..."
                                 name="lastname"
                                 id="lastname"
@@ -62,7 +70,7 @@ const Contact = () => {
                     <div className="w-full">
                         <Label htmlFor="statut">Statut</Label>
                         <Select name="statut" onValueChange={(value) => setSelectedValue(value)}>
-                            <SelectTrigger className="w-full">
+                            <SelectTrigger className="w-full bg-neutral-900">
                                 <SelectValue placeholder="Sélectionnez votre statut..." />
                             </SelectTrigger>
                             <SelectContent>
@@ -77,7 +85,7 @@ const Contact = () => {
                         <Label htmlFor="email">Email</Label>
                         <Input
                             type="email"
-                            className="w-full text-sm"
+                            className="w-full text-sm bg-neutral-900"
                             placeholder="Entrez votre email..."
                             name="email"
                             id="email"
@@ -88,7 +96,7 @@ const Contact = () => {
                     <div className="w-full">
                         <Label htmlFor="message">Message</Label>
                         <Textarea
-                            className="w-full text-sm"
+                            className="w-full text-sm bg-neutral-900"
                             placeholder="Écrivez votre message..."
                             name="message"
                             id="message"
@@ -102,7 +110,7 @@ const Contact = () => {
                     >Envoyer</Button>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

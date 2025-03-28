@@ -5,9 +5,17 @@ import LittleCard from "@/components/blocks/little-card";
 
 const Ateliers = () => {
     return (
-        <>
-            <NavigationMenuDesktop />
-            <div className="flex flex-col items-center justify-center max-w-6xl mx-auto px-4 mt-[15em]">
+        <div className="relative w-full min-h-screen overflow-hidden">
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/neat-long.png')" }}
+            />
+
+            <div className="relative z-20">
+                <NavigationMenuDesktop />
+            </div>
+
+            <div className="relative z-30 flex flex-col items-center justify-center max-w-6xl mx-auto px-4 mt-[15em]">
                 <h1 className="text-4xl font-bold mb-8 text-neutral-200 text-center md:text-left md:self-start">
                     Ateliers
                 </h1>
@@ -23,8 +31,8 @@ const Ateliers = () => {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
-}
+};
 
 export default Ateliers;

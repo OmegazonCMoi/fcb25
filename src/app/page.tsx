@@ -2,22 +2,21 @@
 
 import React from "react";
 import NavigationMenu from "@/components/blocks/navigation-menu";
-import { Lato, Gochi_Hand } from 'next/font/google'
+import { Lato, Gochi_Hand } from "next/font/google";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Gradients from "@/components/blocks/gradients";
 
 const latoThin = Lato({
   subsets: ["latin"],
-  weight: '100'
+  weight: "100",
 });
 
 const latoNormal = Lato({
   subsets: ["latin"],
-  weight: '300'
+  weight: "300",
 });
 
 const gochihand = Gochi_Hand({
@@ -27,7 +26,15 @@ const gochihand = Gochi_Hand({
   display: "swap",
 });
 
-const Counter = ({ from = 0, to, sign }: { from?: number; to: number; sign?: string }) => {
+const Counter = ({
+  from = 0,
+  to,
+  sign,
+}: {
+  from?: number;
+  to: number;
+  sign?: string;
+}) => {
   const [count, setCount] = useState(from);
 
   useEffect(() => {
@@ -49,15 +56,23 @@ const Counter = ({ from = 0, to, sign }: { from?: number; to: number; sign?: str
     return () => clearInterval(timer);
   }, [from, to]);
 
-  return <motion.span className="text-4xl font-bold text-neutral-200">{count}{sign}</motion.span>;
+  return (
+    <motion.span className="text-4xl font-bold text-neutral-200">
+      {count}
+      {sign}
+    </motion.span>
+  );
 };
 
 export default function Home() {
   return (
     <>
       <NavigationMenu />
-      <Gradients />
-      <div className="absolute top-1/2 -translate-y-3/4 left-1/2 -translate-x-1/2 flex flex-col md:flex-row justify-between items-center max-w-7xl w-full text-center md:text-left gap-48">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/neat.png')" }}
+      />
+      <div className="absolute z-20 top-1/2 -translate-y-3/4 left-1/2 -translate-x-1/2 flex flex-col md:flex-row justify-between items-center max-w-7xl w-full text-center md:text-left gap-48">
         <div className="flex flex-col self-start">
           <div className="flex md:hidden items-center justify-center mx-auto z-50">
             <Image
@@ -73,25 +88,48 @@ export default function Home() {
               Du 7 au 8 Avril !
             </p>
           </div>
-          <h1 className={`${latoThin.className} justify-center mx-auto md:mx-0 text-3xl md:text-6xl text-neutral-200`}>
+          <h1
+            className={`${latoThin.className} justify-center mx-auto md:mx-0 text-3xl md:text-6xl text-neutral-200`}
+          >
             Forum Cybersécurité 2025
           </h1>
-          <p className={`${latoNormal.className} justify-center mx-auto md:mx-0 text-lg text-neutral-300 mt-4 w-96 md:w-full`}>
-            Un événement pour découvrir différentes attaques et défenses en cybersécurité avec différents ateliers et sujets de discussion.
+          <p
+            className={`${latoNormal.className} justify-center mx-auto md:mx-0 text-lg text-neutral-300 mt-4 w-96 md:w-full`}
+          >
+            Un événement pour découvrir différentes attaques et défenses en
+            cybersécurité avec différents ateliers et sujets de discussion.
           </p>
           <div className="mt-6 space-x-2 flex items-center justify-center md:justify-start mx-auto md:mx-0">
             <a href="/presentation">
               <Button>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                  <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Découvrir
               </Button>
             </a>
-            <Button variant='secondary'>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <Button variant="secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-6"
+              >
                 <path d="M12 11.993a.75.75 0 0 0-.75.75v.006c0 .414.336.75.75.75h.006a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75H12ZM12 16.494a.75.75 0 0 0-.75.75v.005c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H12ZM8.999 17.244a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.006ZM7.499 16.494a.75.75 0 0 0-.75.75v.005c0 .414.336.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H7.5ZM13.499 14.997a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.005ZM14.25 16.494a.75.75 0 0 0-.75.75v.006c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75h-.005ZM15.75 14.995a.75.75 0 0 1 .75-.75h.005a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75H16.5a.75.75 0 0 1-.75-.75v-.006ZM13.498 12.743a.75.75 0 0 1 .75-.75h2.25a.75.75 0 1 1 0 1.5h-2.25a.75.75 0 0 1-.75-.75ZM6.748 14.993a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" />
-                <path fillRule="evenodd" d="M18 2.993a.75.75 0 0 0-1.5 0v1.5h-9V2.994a.75.75 0 1 0-1.5 0v1.497h-.752a3 3 0 0 0-3 3v11.252a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V7.492a3 3 0 0 0-3-3H18V2.993ZM3.748 18.743v-7.5a1.5 1.5 0 0 1 1.5-1.5h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-13.5a1.5 1.5 0 0 1-1.5-1.5Z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M18 2.993a.75.75 0 0 0-1.5 0v1.5h-9V2.994a.75.75 0 1 0-1.5 0v1.497h-.752a3 3 0 0 0-3 3v11.252a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V7.492a3 3 0 0 0-3-3H18V2.993ZM3.748 18.743v-7.5a1.5 1.5 0 0 1 1.5-1.5h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-13.5a1.5 1.5 0 0 1-1.5-1.5Z"
+                  clipRule="evenodd"
+                />
               </svg>
               Ateliers
             </Button>
@@ -113,30 +151,40 @@ export default function Home() {
         </div>
 
         <Image
-          src='/images/security-illustration.svg'
-          alt='Security Illustration'
+          src="/images/security-illustration.svg"
+          alt="Security Illustration"
           className="hidden md:block"
           width={350}
           height={350}
         />
       </div>
-      <div className="absolute bottom-24 md:bottom-36 w-full px-4">
+      <div className="absolute bottom-24 md:bottom-36 w-full px-4 z-20">
         <div className="flex justify-center items-center mx-auto max-w-7xl w-full p-4 md:p-10 md:border border-neutral-800 rounded-3xl gap-4">
           <div className="flex flex-1 flex-col items-center justify-center md:p-4 text-center">
             <Counter to={10} />
-            <span className="text-base text-gray-400">Ateliers disponibles</span>
+            <span className="text-base text-gray-400">
+              Ateliers disponibles
+            </span>
           </div>
-          <Separator orientation="vertical" className="h-12 md:h-28 bg-neutral-800" />
+          <Separator
+            orientation="vertical"
+            className="h-12 md:h-28 bg-neutral-800"
+          />
           <div className="flex flex-1 flex-col items-center justify-center md:p-4 text-center">
             <Counter to={400} sign="+" />
             <span className="text-base text-gray-400">
-        Participants <br className="visible md:hidden" /> en 2024
-      </span>
+              Participants <br className="visible md:hidden" /> en 2024
+            </span>
           </div>
-          <Separator orientation="vertical" className="h-12 md:h-28 bg-neutral-800" />
+          <Separator
+            orientation="vertical"
+            className="h-12 md:h-28 bg-neutral-800"
+          />
           <div className="flex flex-1 flex-col items-center justify-center md:p-4 text-center">
             <Counter to={95} sign="%" />
-            <span className="text-base text-gray-400">Taux de satisfaction</span>
+            <span className="text-base text-gray-400">
+              Taux de satisfaction
+            </span>
           </div>
         </div>
       </div>
