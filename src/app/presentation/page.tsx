@@ -40,7 +40,7 @@ const Presentation = () => {
                 </div>
             </div>
 
-            <section className="py-32 bg-neutral-950/50 z-50 relative border border-neutral-800" id="objectifs">
+            <section className="py-32 bg-neutral-900 z-50 relative " id="objectifs">
                 <div className="container px-4 md:px-0 mx-auto max-w-screen-xl z-50">
                     <h2 className="text-3xl md:pl-5 lg:text-4xl font-bold">Nos Objectifs</h2>
                     <p className="mt-4 md:pl-5 text-neutral-400 max-w-2xl text-sm md:text-base">L&apos;objectif principal du Forum Cybersécurité est de sensibiliser les participants aux risques numériques et aux bonnes pratiques en matière de cybersécurité. À travers des mises en situation et des ateliers pratiques, les élèves pourront :</p>
