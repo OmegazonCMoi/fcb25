@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
+import React from "react";
 
 interface LittleCardProps {
     icon: React.ReactNode;
@@ -21,9 +22,9 @@ const LittleCard: React.FC<LittleCardProps> = ({ icon, title, description, img, 
                     {description}
                 </p>
             </CardContent>
-            <CardFooter className="justify-end pb-0 pr-0">
+            <CardFooter className="justify-end pb-5 px-5">
                 <Image
-                    className="h-52 w-full rounded-tl-md rounded-br-xl object-cover object-center"
+                    className="h-52 w-full rounded-lg object-cover object-center"
                     src={img}
                     alt="placeholder"
                     width={1000}

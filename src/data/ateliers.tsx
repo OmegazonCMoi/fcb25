@@ -66,7 +66,7 @@ export const ateliers = [
         description: "Un matin, vous allumez votre ordinateur et… tous vos fichiers sont bloqués. Payer ou tout perdre ? Apprenez à éviter ce choix impossible.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Bitcoin className="size-4" strokeWidth={1} />,
-        imgsrc: "/images/ateliers/6.png"
+        imgsrc: "/images/ateliers/2.png"
     },
     {
         id: 8,
@@ -90,6 +90,6 @@ export const ateliers = [
         description: "L’intelligence artificielle est une alliée… jusqu’au jour où elle devient une menace.",
         hotes: ["Zitoune", "Pignouf"],
         icon: <Bot className="size-4" strokeWidth={1} />,
-        imgsrc: "/images/ateliers/4.png"
+        imgsrc: "/images/ateliers/10.png"
     }
 ];
