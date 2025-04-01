@@ -50,7 +50,7 @@ const NavigationMenu = () => {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="fixed top-0 right-0 z-50 flex flex-col items-center w-64 h-full py-10 space-y-6 uppercase border-l border-neutral-800 bg-neutral-900"
+                        className="fixed z-50 top-0 right-0 flex flex-col items-center w-64 h-full py-10 space-y-6 uppercase border-l border-neutral-800 bg-neutral-900"
                         style={{ fontFamily: "AdamBold" }}
                     >
                         <button onClick={() => setIsOpen(!isOpen)} className="text-neutral-300 absolute right-6 top-6">
@@ -60,7 +60,6 @@ const NavigationMenu = () => {
                         <Link href="/" className="text-lg font-bold text-neutral-200" onClick={() => setIsOpen(false)}>Accueil</Link>
                         <Link href="/presentation" className="text-lg font-bold text-neutral-200" onClick={() => setIsOpen(false)}>Presentation</Link>
                         <Link href="/ateliers" className="text-lg font-bold text-neutral-200" onClick={() => setIsOpen(false)}>Ateliers</Link>
-                        <Link href="/salles" className="text-lg font-bold text-neutral-200" onClick={() => setIsOpen(false)}>Salles</Link>
                         <Link href="/contact" className="text-lg font-bold text-neutral-200" onClick={() => setIsOpen(false)}>Contact</Link>
                         </div>
                     </motion.div>
