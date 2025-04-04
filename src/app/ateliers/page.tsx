@@ -31,6 +31,8 @@ const Ateliers = () => {
                     ))}
                 </div>
             </div>
+
+            <a href={'https://www.linkedin.com/in/fab-men/'} className={'fixed bottom-4 right-4 text-white text-sm hover:underline z-50'}>Créé par Fabian Menoni</a>
         </div>
     );
 };
