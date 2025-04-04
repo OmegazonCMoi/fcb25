@@ -95,7 +95,7 @@ const Presentation = () => {
                 </div>
             </section>
 
-            <a href={'https://www.linkedin.com/in/fab-men/'} className={'fixed bottom-4 right-4 text-white text-sm hover:underline z-50'}>Créé par Fabian Menoni</a>
+            <a href={'https://www.linkedin.com/in/fab-men/'} className={'fixed bottom-4 right-4 text-white text-xs md:text-sm hover:underline'}>Créé par Fabian Menoni</a>
         </>
     )
 }

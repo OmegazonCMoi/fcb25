@@ -139,7 +139,7 @@ const Concours = () => {
                 </div>
             </div>
 
-            <a href={'https://www.linkedin.com/in/fab-men/'} className={'absolute bottom-4 right-4 text-white text-sm hover:underline'}>Créé par Fabian Menoni</a>
+            <a href={'https://www.linkedin.com/in/fab-men/'} className={'absolute bottom-4 right-4 text-white text-xs md:text-sm hover:underline'}>Créé par Fabian Menoni</a>
         </div>
     );
 }
