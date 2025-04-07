@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import CryptoJS from "crypto-js";
 
-const PASSWORD_HASH = "246b2fe279d3fcef8fa18251bfa55cecb1e5d07aa74615fdeb9c52d119806a9d";
+const PASSWORD_HASH = "55a8aa11f7dfa8e45c18f6371ac5ca373fa1e587c672883ddaaea926e4c36669";
 const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1355109623106900018/hSr-Kx9PYG9s1t3yn8e8Dry4kCfWIJipSRrb2aMaKqgSlcpnwEf01FX2_3SbZSUOvcZ0";
 
 const Concours = () => {
@@ -17,23 +17,51 @@ const Concours = () => {
     const telRef = useRef<HTMLInputElement>(null);
     const pwdRef = useRef<HTMLInputElement>(null);
     const [selectedValue, setSelectedValue] = useState<string>("");
+    const [error, setError] = useState<string>("");
 
     async function saveEntry() {
+        const MAX_ATTEMPTS = 5;
+        const BLOCK_DURATION_MINUTES = 5;
+        const attemptKey = 'concours_attempts';
+        const blockKey = 'concours_block_until';
+
+        const now = Date.now();
+        const blockedUntil = localStorage.getItem(blockKey);
+        if (blockedUntil && now < parseInt(blockedUntil)) {
+            setError("Trop de tentatives. Réessayez plus tard.");
+            return;
+        }
+
+        let attempts = parseInt(localStorage.getItem(attemptKey) || "0");
+
         const firstname = firstnameRef.current?.value.trim();
         const lastname = lastnameRef.current?.value.trim();
         const tel = telRef.current?.value.trim();
         const password = pwdRef.current?.value.trim();
 
         if (!firstname || !lastname || !tel || !password || !selectedValue) {
-            console.log("Veuillez remplir tous les champs.");
+            setError("Veuillez remplir tous les champs.");
             return;
         }
 
-        // Vérification du mot de passe
         if (CryptoJS.SHA256(password).toString() !== PASSWORD_HASH) {
-            console.log("Mot de passe incorrect.");
+            attempts += 1;
+            localStorage.setItem(attemptKey, attempts.toString());
+
+            if (attempts >= MAX_ATTEMPTS) {
+                const blockUntil = now + BLOCK_DURATION_MINUTES * 60 * 1000;
+                localStorage.setItem(blockKey, blockUntil.toString());
+                setError(`Trop de tentatives. Réessayez dans ${BLOCK_DURATION_MINUTES} minutes.`);
+            } else {
+                setError(`Mot de passe incorrect. Tentative ${attempts}/${MAX_ATTEMPTS}`);
+            }
+
             return;
         }
+
+        // Réinitialise les tentatives si le mot de passe est bon
+        localStorage.removeItem(attemptKey);
+        localStorage.removeItem(blockKey);
 
         const newEntry = {
             firstname,
@@ -42,7 +70,7 @@ const Concours = () => {
             niveau: selectedValue,
         };
 
-        // Envoi au webhook Discord
+        // Envoi à Discord
         const discordMessage = `📩 **Nouveau participant au concours**\n\n👤 **Nom :** ${firstname} ${lastname}\n📞 **Téléphone :** ${tel}\n🎓 **Niveau :** ${selectedValue}`;
 
         try {
@@ -56,7 +84,7 @@ const Concours = () => {
             console.error("Erreur lors de l'envoi du message à Discord :", error);
         }
 
-        // Stockage côté serveur
+        // Envoi au serveur
         try {
             const response = await fetch("/api/inscriptions", {
                 method: "POST",
@@ -65,7 +93,6 @@ const Concours = () => {
             });
 
             if (response.ok) {
-                console.log("Inscription enregistrée !");
                 alert(`Merci ${firstname} ${lastname} pour votre participation !`);
             } else {
                 console.error("Erreur lors de l'enregistrement.");
@@ -136,6 +163,8 @@ const Concours = () => {
 
                     {/* Boutons */}
                     <Button onClick={saveEntry} className="w-full">Participer</Button>
+
+                    {error}
                 </div>
             </div>
 
